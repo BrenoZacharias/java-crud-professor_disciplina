@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PrincipalController">
+  <tabs>
+    <Tab text="Professor">
+         <content>
+            <AnchorPane prefHeight="454.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="tfCodigoProfessor" layoutX="50.0" layoutY="38.0" onAction="#acaoProfessor" promptText="Código do Professor" />
+                  <TextField fx:id="tfNomeProfesor" layoutX="50.0" layoutY="103.0" prefHeight="25.0" prefWidth="527.0" promptText="Nome do Professor" />
+                  <TextField fx:id="tfTitulacaoProfessor" layoutX="50.0" layoutY="173.0" promptText="Titulação do Professor" />
+                  <Button fx:id="btnBuscarProfessor" layoutX="248.0" layoutY="38.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Buscar" />
+                  <Button fx:id="btnInserirProfessor" layoutX="50.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Inserir" />
+                  <Button fx:id="btnAtualizarProfessor" layoutX="196.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Atualizar" />
+                  <Button fx:id="btnExcluirProfessor" layoutX="365.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Excluir" />
+                  <Button fx:id="btnListarProfessor" layoutX="533.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Listar" />
+                  <ScrollPane layoutX="50.0" layoutY="278.0">
+                     <content>
+                        <TextArea fx:id="taListaProfessores" prefHeight="185.0" prefWidth="525.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="btnCopiaProfessor" layoutX="363.0" layoutY="38.0" mnemonicParsing="false" onAction="#copiaProfessor" text="Copiar Professor" />
+               </children></AnchorPane>
+         </content></Tab>
+    <Tab text="Disciplina">
+        <content>
+            <AnchorPane prefHeight="454.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="tfCodigoDisciplina" layoutX="50.0" layoutY="38.0" onAction="#acaoDisciplina" promptText="Código do Disciplina" />
+                  <TextField fx:id="tfNomeDiscilplina" layoutX="50.0" layoutY="103.0" prefHeight="25.0" prefWidth="527.0" promptText="Nome do Disciplina" />
+                  <TextField fx:id="tfCodigoProfessorDisciplina" layoutX="50.0" layoutY="173.0" promptText="Código do Professor" />
+                  <Button fx:id="btnBuscarDisciplina" layoutX="248.0" layoutY="38.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Buscar" />
+                  <Button fx:id="btnInserirDisciplina" layoutX="50.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Inserir" />
+                  <Button fx:id="btnAtualizarDisciplina" layoutX="196.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Atualizar" />
+                  <Button fx:id="btnExcluirDisciplina" layoutX="365.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Excluir" />
+                  <Button fx:id="btnListarDisciplina" layoutX="533.0" layoutY="239.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Listar" />
+                  <ScrollPane layoutX="50.0" layoutY="278.0">
+                     <content>
+                        <TextArea fx:id="taListaDisciplinaes" prefHeight="185.0" prefWidth="525.0" />
+                     </content>
+                  </ScrollPane>
+               </children></AnchorPane>
+         </content></Tab>
+  </tabs>
+</TabPane>
