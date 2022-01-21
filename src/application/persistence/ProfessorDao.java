@@ -33,7 +33,7 @@ public class ProfessorDao implements IProfessorDao{
 
 	@Override
 	public void atualizaProfessor(Professor p) throws SQLException {
-		String sql = "UPDATE professor SET nome = ?, titulacao = ? WHERE codigo = ?)";
+		String sql = "UPDATE professor SET nome = ?, titulacao = ? WHERE codigo = ?";
 		
 		PreparedStatement ps = c.prepareStatement(sql);
 		ps.setString(1, p.getNome());
@@ -46,7 +46,7 @@ public class ProfessorDao implements IProfessorDao{
 
 	@Override
 	public void excluiProfessor(Professor p) throws SQLException {
-		String sql = "DELETE professor WHERE codigo = ?)";
+		String sql = "DELETE professor WHERE codigo = ?";
 		
 		PreparedStatement ps = c.prepareStatement(sql);
 		ps.setInt(1, p.getCodigo());
@@ -91,7 +91,6 @@ public class ProfessorDao implements IProfessorDao{
 		
 		List<Professor> listaProfessores = new ArrayList<Professor>();
 		
-		
 		while(rs.next()) {
 			Professor p = new Professor();
 			p.setCodigo(rs.getInt("codigo"));
@@ -106,5 +105,4 @@ public class ProfessorDao implements IProfessorDao{
 		
 		return listaProfessores;
 	}
-	
 }
