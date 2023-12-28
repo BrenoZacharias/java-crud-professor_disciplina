@@ -15,6 +15,7 @@ public class GenericDao {
 		String dbName = "dbvideojavafx";
 		String user = "sa";
 		String senha = "123456";
+		String instanceName = "SQLEXPRESS";
 
 		Class.forName("net.sourceforge.jtds.jdbc.Driver");
 		
@@ -24,8 +25,8 @@ public class GenericDao {
 //integratedSecurity=True;
 		
 		c = DriverManager.getConnection(
-				String.format("jdbc:jtds:sqlserver://%s;databaseName=%s;user=sa;password=123456",
-						hostName, dbName));
+				String.format("jdbc:jtds:sqlserver://%s;databaseName=%s;user=sa;password=123456;instanceName=%s",
+						hostName, dbName, instanceName));
 
 		return c;
 		
